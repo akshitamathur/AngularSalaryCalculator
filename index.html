@@ -1,0 +1,51 @@
+<DOCTYPE>
+	<html>
+	<head>
+		<title>Angular Salary App</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	</head>
+
+	<body ng-app="myApp">
+
+		{{2+2}}
+		<!-- <div>
+			<h2>{{title}}</h2>
+		</div> -->
+		<div ng-controller="MathController">
+			<input type="text" ng-model="gross" />
+        	 <!-- <button input type="button" class="btn" name="StackOfPaper" ng-click="empInsurance()">{{insurance|number:0}}</button> -->
+			<p> The employee deduction and CPP deduction is: {{empInsurance()}}</p>
+
+			 <!-- <code>selection={{dependants}}</code> -->
+			
+			<!-- <p> With the Canadian Pension Plan deduction the final salary is: {{cpp()}}</p> -->
+			<!-- <select ng-model="dependants" ng-options="dependant for dependant in dependants"/>
+				<div ng-switch on="dependants">
+      				<div ng-switch-when="2">2 Dependants</div>
+      				<div ng-switch-when="3">3 Dependants</div>
+      				<div ng-switch-when="4">4 dependants</div>
+  				</div> -->
+
+  				
+			<p> The Income Tax deduction is: {{dependants()}}</p>
+			<p>Check if you are female: <input id="chk2" type="checkbox" ng-model="chkVal2" 
+                             ng-false-value="'Male'" ng-true-value="'Female'" />
+                             <button ng-click="gender()">Get Value</button>
+			
+		</div>
+
+
+
+	</body>
+
+
+<script src="app.js"></script>
+<!-- <script src="Angular/Controllers/MainController.js"></script> -->
+<script>
+	
+
+	
+</script>
+
+	</html>
+
