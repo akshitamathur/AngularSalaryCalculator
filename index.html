@@ -12,39 +12,32 @@
 			<h2>{{title}}</h2>
 		</div> -->
 		<div ng-controller="MathController">
-			<input type="text" ng-model="gross" />
-			<p> The employee deduction is: {{empInsurance()}}</p>
-			<p> The cpp deduction is: {{cppDeduction()}}<p>
-			<p> The bonus addition is: {{bonusAdd()}}<p>
-			<p> The total salary so far is: {{totalSoFar().toFixed(2)}}<p>
+			<input type="text" ng-model="gross" placeholder="Enter your salary."/>
+			<input type="text" ng-model="bonus" placeholder="Enter your bonus." />
+			<p> The employee deduction is: {{empInsurance().toFixed(2)}}</p>
+			<p> The cpp deduction is: {{cppDeduction().toFixed(2)}}<p>
+			<p> The bonus addition is: {{bonusAdd().toFixed(2)}}<p>
+			<p> The Income Tax deduction is: {{incomeTax().toFixed(2)}}<p>
+			
 
 			<!-- <p> The CPP deduction is: {{cpp()}}</p> -->
             <select ng-options="gender for gender in genders" ng-model="selectedG" ng-init="selectedG = true"></select>
-
-            	
-          
-            
 			
             <select ng-options="dependant for dependant in dependants" ng-model="selectedD"></select>
 
 				<div ng-switch on="selectedD">
-      				<div ng-switch-when="2">2 Dependants</div>
-      				<div ng-switch-when="3">3 Dependants</div>
-      				<div ng-switch-when="4">4 dependants</div>
+      				<div ng-switch-when="2"></div>
+      				<div ng-switch-when="3"></div>				
+      				<div ng-switch-when="4"></div>
   				</div> 
 
-  				<!-- <p> The income tax is: {{SwitchFunction(selectedG, selectedD)}}</p> -->
 
-				<!-- <div ng-switch on="selectedD">
-					<div ng-switch-when="2">{{maletwo()}}</div>
-						<div ng-switch-when="3">{{malethree()}}</div>
-							<div ng-switch-when="4">{{malefour()}}</div>
+				<div ng-switch on="selectedG">
+					<div ng-switch-when="Male"></div>
+					<div ng-switch-when="Female"></div>
+				</div>
 
-											<p> The final salary is: {{finalSalary()}}<p> -->
-
-	
-		</div>
-
+				<p> The Final Salary is: {{totalSalary().toFixed(2)}}<p>
 		
 		
 			
