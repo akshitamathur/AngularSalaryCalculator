@@ -13,28 +13,47 @@
 		</div> -->
 		<div ng-controller="MathController">
 			<input type="text" ng-model="gross" />
-        	 <!-- <button input type="button" class="btn" name="StackOfPaper" ng-click="empInsurance()">{{insurance|number:0}}</button> -->
-			<p> The employee deduction and CPP deduction is: {{empInsurance()}}</p>
+			<p> The employee deduction is: {{empInsurance()}}</p>
+			<p> The cpp deduction is: {{cppDeduction()}}<p>
+			<p> The bonus addition is: {{bonusAdd()}}<p>
+			<p> The total salary so far is: {{totalSoFar().toFixed(2)}}<p>
 
-			 <!-- <code>selection={{dependants}}</code> -->
+			<!-- <p> The CPP deduction is: {{cpp()}}</p> -->
+            <select ng-options="gender for gender in genders" ng-model="selectedG" ng-init="selectedG = true"></select>
+
+            	
+          
+            
 			
-			<!-- <p> With the Canadian Pension Plan deduction the final salary is: {{cpp()}}</p> -->
-			<!-- <select ng-model="dependants" ng-options="dependant for dependant in dependants"/>
-				<div ng-switch on="dependants">
+            <select ng-options="dependant for dependant in dependants" ng-model="selectedD"></select>
+
+				<div ng-switch on="selectedD">
       				<div ng-switch-when="2">2 Dependants</div>
       				<div ng-switch-when="3">3 Dependants</div>
       				<div ng-switch-when="4">4 dependants</div>
-  				</div> -->
+  				</div> 
+
+  				<!-- <p> The income tax is: {{SwitchFunction(selectedG, selectedD)}}</p> -->
+
+				<!-- <div ng-switch on="selectedD">
+					<div ng-switch-when="2">{{maletwo()}}</div>
+						<div ng-switch-when="3">{{malethree()}}</div>
+							<div ng-switch-when="4">{{malefour()}}</div>
+
+											<p> The final salary is: {{finalSalary()}}<p> -->
+
 	
-			<!-- <p> The Income Tax deduction is: {{dependants()}}</p> -->
-			<!-- <p>Check if you are female: <input id="chk2" type="checkbox" ng-model="chkVal2" 
-                             ng-false-value="'Male'" ng-true-value="'Female'" />
-                             <button ng-click="gender()">Get Value</button> -->
 		</div>
+
+		
+		
+			
+
 	</body>
 
 
 <script src="app.js"></script>
+<script src="angular.js"></script>
 <!-- <script src="Angular/Controllers/MainController.js"></script> -->
 <script>
 	
@@ -43,4 +62,3 @@
 </script>
 
 	</html>
-
