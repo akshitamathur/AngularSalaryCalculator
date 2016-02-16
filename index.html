@@ -1,7 +1,7 @@
-<DOCTYPE>
-	<html>
+<!DOCTYPE html>
 	<head>
 		<title>Angular Salary App</title>
+		<link rel="stylesheet/less" type="text/css" href="style.less">
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 		<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.3/less.min.js"></script>
 	</head>
@@ -23,7 +23,7 @@
       <p> Select the number of dependants:
       <select ng-options="dependant for dependant in dependants" ng-model="selectedD"></select>
       </p>
-      
+
 			<p> Your final salary is: ${{totalSalary().toFixed(2)}}</p>
 
 	</body>

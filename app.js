@@ -18,16 +18,16 @@ app.controller('MathController', function($scope) {
 
       $scope.empInsurance = function() {
 
-       return (Number($scope.gross) * (Number($scope.insurance)/100)); 
-      }
+      return (Number($scope.gross) * (Number($scope.insurance)/100));
+      };
 
       $scope.cppDeduction = function(){
         return (Number($scope.gross) * (Number($scope.cpp)/100));
-      }  
+      };
 
       $scope.bonusAdd = function(){
         return $scope.bonus;
-      }
+      };
          
       $scope.incomeTax = function() {
           $scope.percentage = 0;
@@ -53,11 +53,11 @@ app.controller('MathController', function($scope) {
           }
           
           return (Number($scope.gross) * Number($scope.percentage));
-        }
+        };
 
         $scope.totalSalary = function(){
           return (Number($scope.gross) - $scope.empInsurance() - $scope.cppDeduction() - $scope.incomeTax() + Number($scope.bonus));
-        }
+        };
 
         
 });
